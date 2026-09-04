@@ -1,0 +1,128 @@
+/* ============================================
+   Footer Styles
+   ============================================ */
+
+.footer {
+    background: #111;
+    border-top: 1px solid var(--border-red);
+    padding: 60px 0 0;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.footer-brand .logo {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.footer-brand p {
+    color: var(--gray-text);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 280px;
+}
+
+.footer-col h4 {
+    font-size: 1rem;
+    margin-bottom: 18px;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a,
+.footer-links button {
+    color: var(--gray-text);
+    font-size: 0.95rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+    padding: 0;
+    transition: var(--transition);
+}
+
+.footer-links a:hover,
+.footer-links button:hover {
+    color: var(--soft-red);
+}
+
+/* Social Icons */
+.social-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: var(--black-card);
+    border: 1px solid var(--border-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-text);
+    transition: var(--transition);
+    font-size: 1.2rem;
+}
+
+.social-btn:hover {
+    background: var(--soft-red-bg);
+    border-color: var(--primary-red);
+    color: var(--primary-red);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--gray-dark);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
+    .footer-links a,
+    .footer-links button {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
