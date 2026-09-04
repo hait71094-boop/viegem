@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIEGEM - RPG Server Việt Nam | Minecraft MagiRPG</title>
+    <meta name="description" content="VIEGEM - Máy chủ Minecraft RPG Việt Nam. Phiêu lưu MagiRPG, phép thuật, dungeon, bang hội. IP: viegem.net">
+    <meta name="keywords" content="VIEGEM, Minecraft Việt Nam, MagiRPG, server Minecraft, RPG server, viegem.net">
+    <meta name="author" content="CoreLinks / VIEGEM">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="VIEGEM - RPG Server Việt Nam">
+    <meta property="og:description" content="Khám phá thế giới Minecraft phép thuật MagiRPG. IP: viegem.net">
+    <meta property="og:image" content="images/logo.webp">
+    <meta property="og:url" content="https://viegem.net">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:site_name" content="VIEGEM">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="VIEGEM - RPG Server Việt Nam">
+    <meta name="twitter:description" content="Máy chủ Minecraft MagiRPG. IP: viegem.net">
+    <meta name="twitter:image" content="images/logo.webp">
+
+    <link rel="icon" type="image/png" href="images/server-icon.png">
+    <link rel="apple-touch-icon" href="images/logo.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="#" class="logo-link" data-scroll="hero" aria-label="VIEGEM Trang chủ">
+                <img src="images/logo.webp" alt="VIEGEM Logo" class="logo-img">
+                <span class="logo-text"><span class="v">V</span>IE<span class="g">G</span>EM</span>
+            </a>
+
+            <nav class="nav">
+                <button class="nav-link" data-scroll="hero">Giới thiệu</button>
+                <button class="nav-link" data-scroll="server-info">Thông tin kết nối</button>
+                <button class="nav-link" data-scroll="modes">Các cụm máy chủ</button>
+                <button class="nav-link" data-scroll="rules">Luật lệ</button>
+                <button class="nav-link" data-scroll="staff">Đội ngũ quản trị</button>
+            </nav>
+
+            <button class="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <button class="nav-link" data-scroll="hero">Giới thiệu</button>
+            <button class="nav-link" data-scroll="server-info">Thông tin kết nối</button>
+            <button class="nav-link" data-scroll="modes">Các cụm máy chủ</button>
+            <button class="nav-link" data-scroll="rules">Luật lệ</button>
+            <button class="nav-link" data-scroll="staff">Đội ngũ quản trị</button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <img src="images/logo.webp" alt="VIEGEM" class="hero-logo reveal">
+            <div class="hero-badge">✦ Minecraft RPG Server Việt Nam</div>
+            <h1 class="hero-title">
+                <span class="highlight">VIEGEM</span> — Cộng Đồng<br>Minecraft Việt Nam
+            </h1>
+            <p class="hero-desc">
+                Khám phá thế giới Minecraft đầy phép thuật với cụm máy chủ MagiRPG.
+                Tham gia ngay để trải nghiệm những điều kỳ diệu!
+            </p>
+            <div class="hero-actions">
+                <button class="btn btn-primary" data-scroll="server-info">Chơi ngay</button>
+                <a href="magirpg/index.html" class="btn btn-outline">Khám phá MagiRPG</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVER INFO -->
+    <section id="server-info" class="section server-info">
+        <div class="container text-center">
+            <h2 class="section-title">Thông Tin Kết Nối</h2>
+            <p class="section-subtitle">Sao chép IP và tham gia ngay cùng cộng đồng VIEGEM</p>
+
+            <div class="server-card reveal">
+                <img id="server-icon" class="server-favicon" src="images/server-icon.png" alt="VIEGEM Server" width="64" height="64">
+                <h3 class="server-name">VIEGEM</h3>
+                <p id="server-motd" class="server-motd">Đang tải...</p>
+                <div class="ip-box">
+                    <span class="ip-text" id="server-ip">viegem.net</span>
+                    <button class="btn-copy" id="copy-ip-btn" title="Sao chép IP">📋 Copy IP</button>
+                </div>
+                <div class="status-row">
+                    <div class="status-item">
+                        <span class="status-label">Trạng thái</span>
+                        <span class="status-value">
+                            <span class="status-dot offline" id="status-dot"></span>
+                            <span id="status-text">Đang kiểm tra...</span>
+                        </span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Người chơi</span>
+                        <span class="status-value" id="players-text">—</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Phiên bản</span>
+                        <span class="status-value" id="version-text">—</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODES -->
+    <section id="modes" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Các Cụm Máy Chủ</h2>
+            <p class="section-subtitle">Chọn cụm máy chủ phù hợp với phong cách chơi của bạn</p>
+            <div class="modes-grid">
+                <a href="magirpg/index.html" class="mode-card active reveal reveal-delay-1">
+                    <div class="mode-bg" style="background-image: url('images/modes/magirpg.webp');"></div>
+                    <div class="mode-overlay"></div>
+                    <div class="mode-content">
+                        <span class="mode-badge active">● Đang hoạt động</span>
+                        <h3 class="mode-title">MagiRPG</h3>
+                        <p class="mode-desc">Cụm máy chủ RPG phép thuật — Phiêu lưu, nhiệm vụ, phép thuật và chiến đấu!</p>
+                    </div>
+                </a>
+                <a href="mythicsurvival/index.html" class="mode-card inactive reveal reveal-delay-2">
+                    <div class="mode-bg" style="background-image: url('images/modes/mythicsurvival.webp'); filter: brightness(0.45);"></div>
+                    <div class="mode-overlay"></div>
+                    <div class="mode-content">
+                        <span class="mode-badge inactive">Đang bảo trì</span>
+                        <h3 class="mode-title">MythicSurvival</h3>
+                        <p class="mode-desc">Cụm Survival huyền thoại với nhiều tính năng độc đáo. Sắp ra mắt!</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RULES -->
+    <section id="rules" class="section" style="background: var(--black-light);">
+        <div class="container text-center">
+            <h2 class="section-title">Luật Lệ Máy Chủ</h2>
+            <p class="section-subtitle">Hãy tuân thủ các quy tắc để cộng đồng luôn văn minh và vui vẻ</p>
+            <div class="rules-grid">
+                <div class="rule-card reveal reveal-delay-1">
+                    <div class="rule-icon">🚫</div>
+                    <h3 class="rule-title">Không gian lận</h3>
+                    <p class="rule-desc">Cấm hack client, cheat, xray, fly, killaura hoặc phần mềm gian lận.</p>
+                </div>
+                <div class="rule-card reveal reveal-delay-2">
+                    <div class="rule-icon">💬</div>
+                    <h3 class="rule-title">Không gây rối chat</h3>
+                    <p class="rule-desc">Không spam, toxic, chửi bới hoặc quấy rối người chơi khác.</p>
+                </div>
+                <div class="rule-card reveal reveal-delay-3">
+                    <div class="rule-icon">🤝</div>
+                    <h3 class="rule-title">Tôn trọng mọi người</h3>
+                    <p class="rule-desc">Đối xử lịch sự với người chơi và staff.</p>
+                </div>
+                <div class="rule-card reveal reveal-delay-4">
+                    <div class="rule-icon">📢</div>
+                    <h3 class="rule-title">Không quảng cáo</h3>
+                    <p class="rule-desc">Cấm quảng cáo máy chủ / dịch vụ bên ngoài.</p>
+                </div>
+                <div class="rule-card reveal reveal-delay-5">
+                    <div class="rule-icon">🐛</div>
+                    <h3 class="rule-title">Không lợi dụng bug</h3>
+                    <p class="rule-desc">Phát hiện bug phải báo staff. Lợi dụng sẽ bị xử lý.</p>
+                </div>
+                <div class="rule-card reveal reveal-delay-6">
+                    <div class="rule-icon">🛡️</div>
+                    <h3 class="rule-title">Tuân thủ Staff</h3>
+                    <p class="rule-desc">Quyết định của quản trị viên là cuối cùng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STAFF -->
+    <section id="staff" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Đội Ngũ Quản Trị</h2>
+            <p class="section-subtitle">Những người đang vận hành và hỗ trợ cộng đồng VIEGEM</p>
+            <div class="staff-grid" id="staff-grid">
+                <!-- Rendered by js/staff.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="#" class="logo-link" data-scroll="hero">
+                    <img src="images/logo.webp" alt="VIEGEM" class="logo-img logo-img-sm">
+                    <span class="logo-text"><span class="v">V</span>IE<span class="g">G</span>EM</span>
+                </a>
+                <p>Cộng đồng Minecraft Việt Nam — Nơi hội tụ những tâm hồn yêu thích phiêu lưu và phép thuật.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liên kết nhanh</h4>
+                <ul class="footer-links">
+                    <li><button data-scroll="hero">Giới thiệu</button></li>
+                    <li><button data-scroll="server-info">Thông tin kết nối</button></li>
+                    <li><button data-scroll="rules">Luật lệ</button></li>
+                    <li><a href="magirpg/index.html">MagiRPG</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Mạng xã hội</h4>
+                <div class="social-links">
+                    <a href="https://facebook.com/viegem" target="_blank" rel="noopener noreferrer" class="social-btn" title="Facebook" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://discord.gg/viegem" target="_blank" rel="noopener noreferrer" class="social-btn" title="Discord" aria-label="Discord">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                    </a>
+                    <a href="https://youtube.com/@viegem" target="_blank" rel="noopener noreferrer" class="social-btn" title="YouTube" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="https://tiktok.com/@viegem" target="_blank" rel="noopener noreferrer" class="social-btn" title="TikTok" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 VIEGEM - Bản quyền thuộc về team CoreLinks. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/server-status.js"></script>
+    <script src="js/copy-ip.js"></script>
+    <script src="js/staff.js"></script>
+</body>
+</html>
